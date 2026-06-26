@@ -1,3 +1,4 @@
+import heroImg from "../assets/hero.png"
 import "./Hero.css"
 
 export default function Hero() {
@@ -23,11 +24,8 @@ export default function Hero() {
           </a>
         </div>
       </div>
-      <div className="hero-decor">
-        <span className="float float-1">🌷</span>
-        <span className="float float-2">🌿</span>
-        <span className="float float-3">🌹</span>
-        <span className="float float-4">🍃</span>
+      <div className="hero-image">
+        <img src={heroImg} alt="Beautiful fresh flower arrangement" />
       </div>
     </section>
   )

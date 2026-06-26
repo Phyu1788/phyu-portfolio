@@ -1,16 +1,17 @@
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 100px 24px 80px;
-  text-align: center;
-  background: linear-gradient(135deg, var(--pink-light) 0%, var(--cream) 50%, var(--green-light) 100%);
+  padding: 80px 48px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero-content {
-  max-width: 700px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
+  flex: 1;
+  min-width: 0;
 }
 
 .hero-tag {
@@ -43,15 +44,14 @@
 .hero-subtitle {
   font-size: 1.15rem;
   color: var(--text-light);
-  max-width: 500px;
-  margin: 0 auto 36px;
+  max-width: 480px;
+  margin-bottom: 36px;
   line-height: 1.7;
 }
 
 .hero-actions {
   display: flex;
   gap: 16px;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -89,32 +89,46 @@
   color: var(--green-dark);
 }
 
-.hero-decor {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
+.hero-image {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.float {
-  position: absolute;
-  font-size: 2.5rem;
-  opacity: 0.3;
-  animation: floatAnim 6s ease-in-out infinite;
-}
-
-.float-1 { top: 15%; left: 8%; animation-delay: 0s; }
-.float-2 { top: 25%; right: 10%; animation-delay: 1.5s; }
-.float-3 { bottom: 20%; left: 12%; animation-delay: 3s; }
-.float-4 { bottom: 15%; right: 8%; animation-delay: 4.5s; }
-
-@keyframes floatAnim {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-15px) rotate(5deg); }
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
-  .hero { padding: 70px 20px 60px; }
-  .hero-title { font-size: 2.5rem; }
-  .hero-subtitle { font-size: 1rem; }
-  .float { font-size: 1.8rem; }
+  .hero {
+    flex-direction: column-reverse;
+    padding: 40px 20px 60px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-image img {
+    max-width: 320px;
+    border-radius: 20px;
+  }
 }

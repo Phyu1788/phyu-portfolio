@@ -5,6 +5,8 @@ import "./Header.css"
 const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#shop", label: "Shop" },
+  { href: "#meanings", label: "Meanings" },
+  { href: "#gallery", label: "Gallery" },
   { href: "#about", label: "About" },
   { href: "#contact", label: "Contact" },
 ]
