@@ -25,6 +25,8 @@ export default function Footer() {
           <h4>Quick Links</h4>
           <a href="#home">Home</a>
           <a href="#shop">Shop</a>
+          <a href="#meanings">Meanings</a>
+          <a href="#gallery">Gallery</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </div>

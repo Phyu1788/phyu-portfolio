@@ -3,6 +3,8 @@ import { CartProvider } from "./context/CartContext"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import ProductGrid from "./components/ProductGrid"
+import FlowerMeaning from "./components/FlowerMeaning"
+import BouquetGallery from "./components/BouquetGallery"
 import About from "./components/About"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
@@ -20,6 +22,8 @@ function App() {
       <main>
         <Hero />
         <ProductGrid onProductClick={setSelectedProduct} />
+        <FlowerMeaning />
+        <BouquetGallery />
         <About />
         <Contact />
       </main>
